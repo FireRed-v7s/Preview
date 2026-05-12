@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Pitch Deck</title>
+<style>
+    :root{
+        --bg1:#f8fafc;
+        --bg2:#eef2ff;
+        --accent:#2563eb;
+        --accent2:#059669;
+        --text:#0f172a;
+        --muted:#334155;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+        margin:0;
+        font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        background: radial-gradient(circle at top, var(--bg2), var(--bg1));
+        color:var(--text);
+        overflow:hidden;
+    }
+
+    .bg{
+        position:fixed;
+        inset:0;
+        background:
+            radial-gradient(circle at 20% 20%, rgba(37,99,235,0.12), transparent 40%),
+            radial-gradient(circle at 80% 70%, rgba(5,150,105,0.10), transparent 45%);
+        filter:blur(20px);
+        z-index:0;
+    }
+
+    .slide{
+        position:absolute;
+        inset:0;
+        padding:90px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        opacity:0;
+        transform:translateX(60px);
+        transition:all 0.6s ease;
+        z-index:1;
+    }
+
+    .active{
+        opacity:1;
+        transform:translateX(0);
+        z-index:2;
+    }
+
+    h1{
+        font-size:54px;
+        margin:0 0 10px;
+        color:var(--text);
+    }
+
+    h2{
+        font-size:22px;
+        color:var(--muted);
+        margin-bottom:20px;
+    }
+
+    p, li{
+        font-size:20px;
+        line-height:1.7;
+        max-width:1000px;
+    }
+
+    .card{
+        background:rgba(255,255,255,0.9);
+        padding:26px;
+        border-radius:16px;
+        border:1px solid rgba(15,23,42,0.08);
+        box-shadow:0 20px 50px rgba(0,0,0,0.08);
+        max-width:1100px;
+    }
+
+    ul{padding-left:20px;}
+
+    iframe{
+        width:100%;
+        height:420px;
+        border:none;
+        border-radius:12px;
+    }
+
+    .nav{
+        position:fixed;
+        bottom:20px;
+        right:20px;
+        z-index:10;
+    }
+
+    button{
+        padding:10px 14px;
+        margin:5px;
+        border:none;
+        border-radius:10px;
+        background:#e2e8f0;
+        color:#0f172a;
+        cursor:pointer;
+    }
+
+    button:hover{background:#cbd5e1;}
+
+    .progress{
+        position:fixed;
+        top:0;
+        left:0;
+        height:4px;
+        background:linear-gradient(90deg,var(--accent),var(--accent2));
+        width:0%;
+        transition:0.4s;
+        z-index:20;
+    }
+
+    .dots{
+        position:fixed;
+        bottom:20px;
+        left:20px;
+        display:flex;
+        gap:8px;
+    }
+
+    .dot{
+        width:10px;
+        height:10px;
+        border-radius:50%;
+        background:#94a3b8;
+        cursor:pointer;
+    }
+
+    .dot.active{background:var(--accent);}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="progress" id="progress"></div>
+
+<!-- SLIDE 1 -->
+<div class="slide active">
+    <h1>Product Vision</h1>
+    <div class="card">
+        <p>A scalable ecosystem focused on productivity, finance management, and local business digital transformation through modern web technologies.</p>
+    </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+    <h1>Problem</h1>
+    <div class="card">
+        <ul>
+            <li>Small businesses lack digital systems</li>
+            <li>Productivity tools are fragmented</li>
+            <li>Finance tracking is not simplified</li>
+            <li>No unified digital workspace for users</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+    <h1>Solution</h1>
+    <div class="card">
+        <p>A unified platform that combines productivity tools, finance systems, and business dashboards into one scalable ecosystem.</p>
+    </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+    <h1>Product Example</h1>
+    <div class="card">
+        <p>Live system demonstrating current progress:</p>
+        <iframe src="https://firered-v7s.github.io/Link-Dashboard/"></iframe>
+    </div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+    <h1>Core Features</h1>
+    <div class="card">
+        <ul>
+            <li>Dashboard-based link & tool management</li>
+            <li>Productivity workspace system</li>
+            <li>Finance & tracking modules</li>
+            <li>Local business integration tools</li>
+            <li>AI-powered automation (future expansion)</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+    <h1>Business Model</h1>
+    <div class="card">
+        <ul>
+            <li>Freemium model</li>
+            <li>Premium subscriptions for advanced features</li>
+            <li>Business plans for local companies</li>
+            <li>Custom enterprise solutions</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide">
+    <h1>Market Opportunity</h1>
+    <div class="card">
+        <p>Growing demand for digital business tools in emerging markets, especially small and medium businesses adopting online systems.</p>
+    </div>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide">
+    <h1>Tech Stack Vision</h1>
+    <div class="card">
+        <ul>
+            <li>I Don't Know! That's why I ritchout to you.*</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SLIDE 9 -->
+<div class="slide">
+    <h1>Roadmap</h1>
+    <div class="card">
+        <ul>
+            <li>MVP Development</li>
+            <li>Core features</li>
+            <li>Business onboarding tools</li>
+            <li>AI integration phase</li>
+            <li>Scaling & monetization</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SLIDE 10 -->
+<div class="slide">
+    <h1>What I Need</h1>
+    <div class="card">
+        <ul>
+            <li>Full-stack development support</li>
+            <li>UI/UX design expertise</li>
+            <li>Scalable system architecture</li>
+            <li>Cost estimation for MVP</li>
+            <li>Long-term technical partnership</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SLIDE 11 -->
+<div class="slide">
+    <h1>Closing Vision</h1>
+    <div class="card">
+        <p>Building a long-term ecosystem that empowers individuals and local businesses with modern digital tools.</p>
+    </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+    <button onclick="prev()">◀</button>
+    <button onclick="next()">▶</button>
+</div>
+
+<div class="dots" id="dots"></div>
+
+<script>
+let i=0;
+const slides=document.querySelectorAll('.slide');
+const progress=document.getElementById('progress');
+const dots=document.getElementById('dots');
+
+function init(){
+    slides.forEach((_,idx)=>{
+        const d=document.createElement('div');
+        d.className='dot';
+        d.onclick=()=>go(idx);
+        dots.appendChild(d);
+    });
+}
+
+function updateDots(){
+    document.querySelectorAll('.dot').forEach((d,idx)=>{
+        d.classList.toggle('active',idx===i);
+    });
+}
+
+function go(n){
+    slides[i].classList.remove('active');
+    i=n;
+    slides[i].classList.add('active');
+    progress.style.width=((i+1)/slides.length)*100+'%';
+    updateDots();
+}
+
+function next(){if(i<slides.length-1)go(i+1);}
+function prev(){if(i>0)go(i-1);}
+
+window.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight')next();
+    if(e.key==='ArrowLeft')prev();
+});
+
+init();
+go(0);
+</script>
+
+</body>
+</html>
